@@ -43,7 +43,7 @@ def find_two_sum_pairs(nums, target):
     # TODO: 이중 반복문으로 모든 쌍을 확인하세요
     for i in range(n-1):
         for j in range(i+1,n):
-            if nums[i]+nums[2] == target:
+            if nums[i]+nums[j] == target:
                 pairs.append((i,j))
 
     ## 외부 반복문: i는 0부터 n-1까지
