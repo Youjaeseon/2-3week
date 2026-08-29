@@ -159,15 +159,8 @@ def combinations(n: int, k: int) -> list:
         #
         # TODO(Level 2): 아래 한 줄을 작성하세요.
 
-        for num in n+1:
-            for x in 
-            if start == n+1:
-                break
-            current_combination += [m]
+        for num in range(start,n+1):
             
-
-
-        pass
 
             # ──────────────────────────────────────────────────────────────
             # [Level 3] 백트래킹 3단계
@@ -178,9 +171,9 @@ def combinations(n: int, k: int) -> list:
             #   3) 취소(Unchoose): current_combination 의 마지막 요소를 제거
             #
             # TODO(Level 3): 아래 세 줄을 작성하세요.
-            # current_combination.append(...)
-            # backtrack(..., current_combination)
-            # current_combination.pop()
+             current_combination.append(num)
+             backtrack(num+1, current_combination)
+             current_combination.pop()
 
     # 처음 호출: 시작 숫자는 1, 지금까지 고른 숫자는 비어 있음
     backtrack(1, [])
