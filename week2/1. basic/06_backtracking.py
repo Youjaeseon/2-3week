@@ -144,6 +144,10 @@ def combinations(n: int, k: int) -> list:
         # if len(current_combination) == ...:
         #     result.append(...)
         #     return
+        if len(current_combination) == k:
+            result.append(list(current_combination))
+            return
+
         pass  
 
         # ──────────────────────────────────────────────────────────────────
@@ -154,6 +158,15 @@ def combinations(n: int, k: int) -> list:
         # - 반복문 변수 이름은 num 으로 추천 (의미: "이번에 고를 숫자").
         #
         # TODO(Level 2): 아래 한 줄을 작성하세요.
+
+        for num in n+1:
+            for x in 
+            if start == n+1:
+                break
+            current_combination += [m]
+            
+
+
         pass
 
             # ──────────────────────────────────────────────────────────────
