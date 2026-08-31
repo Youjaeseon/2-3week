@@ -22,9 +22,11 @@
 - arr[mid]와 target 비교하여 범위 조정
 """
 
+# 이진 탐색 : 리스트를 반씩 줄여 해당 값이 해당하는 쪽으로 범위를 좁혀 같은 행위를
+#             반복하며 해당 값을 찾는다. strat, end, mid 3개의 값이 필요하다.
 def binary_search(arr, target):
     """
-    이분 탐색 구현
+    이분 탐색 구현 
     
     Args:
         arr: 정렬된 배열
@@ -42,7 +44,16 @@ def binary_search(arr, target):
     ## 같으면 mid 반환
     ## target이 더 크면 left = mid + 1
     ## target이 더 작으면 right = mid - 1
-    pass
+    
+    for x in range(len(arr)-1):
+
+        mid = (left + right)//2
+        if target < arr[mid]:
+            right = mid -1
+        elif target > arr[mid]:
+            left = mid + 1
+        else:
+            return mid
     
     return -1
 
