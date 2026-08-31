@@ -54,7 +54,7 @@ def find_duplicates_sorting(nums):
         return []
     
     # TODO: 배열을 정렬하세요 (nums.sort() 사용)
-    nums.sort()
+    nums.sort() # log nlogn임. sort중에 제일 효율이 좋은 시간복잡도.
     pass
     
     duplicates = []
