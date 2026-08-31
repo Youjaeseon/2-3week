@@ -92,13 +92,7 @@ print_list() 가 해야 할 일:
 """
 
 class Node:
-    """
-    연결 리스트의 노드 (한 칸 = 데이터 + 다음 화살표)
 
-        ┌──────┬──────┐
-        │ data │ next │ ──▶ (다른 Node 또는 None)
-        └──────┴──────┘
-    """
     def __init__(self, data):
         self.data = data
         self.next = None
