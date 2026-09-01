@@ -108,19 +108,7 @@ class LinkedList:
         self.head = None
 
     def append(self, data):
-        """
-        리스트 끝에 노드 추가
-
-        그림으로 보는 두 가지 경우:
-
-        ① 비어 있을 때 (self.head is None)
-              head ─▶ None     ──append(7)──▶    head ─▶ [7|None]
-
-        ② 이미 노드가 있을 때
-              head ─▶ [1|●]─▶[2|None]
-                                       ──append(7)──▶
-              head ─▶ [1|●]─▶[2|●]─▶[7|None]
-        """
+    
         new_node = Node(data)
 
         # ─── Level 1: 리스트가 비어 있는 경우 ────────────────────────
@@ -192,3 +180,6 @@ if __name__ == "__main__":
     ll2.append(40)
     result2 = ll2.print_list()
     print(f"리스트: {result2}")
+
+
+
