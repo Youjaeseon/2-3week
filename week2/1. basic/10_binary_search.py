@@ -45,7 +45,7 @@ def binary_search(arr, target):
     ## target이 더 크면 left = mid + 1
     ## target이 더 작으면 right = mid - 1
     
-    #for x in range(len(arr)-1):
+    #for x in range(len(arr)-1): 이건 다 돌아야함. 이분탐색이랑 맞지 않다.
 
     while left <= right:
 
