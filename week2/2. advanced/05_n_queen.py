@@ -73,19 +73,17 @@ def n_queens(n: int) -> int:
 
          for col in range(n):
           possible = True
-
           for i in range(row):
             if cols[i] == col:
               possible = False
               break
-            
             if abs(cols[i]-col ) == row -i:
              possible = False
              break 
 
-         if possible:
+          if possible:
              cols[row] = col
-         place(row+1)
+             place(row+1)
 
            
     place(0)
