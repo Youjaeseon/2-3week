@@ -62,13 +62,35 @@ def n_queens(n: int) -> int:
     """
     # TODO: 백트래킹으로 가능한 배치의 수를 반환하세요.
     # 권장 구조:
-    #   cols = [0] * n
-    #   count = 0
-    #   def place(row):
-    #       ...
-    #   place(0)
-    #   return count
-    pass
+    cols = [0] * n
+    count = 0
+    
+    def place(row):
+         nonlocal count
+         if row == n:
+            count += 1
+            return
+
+         for col in range(n):
+          possible = True
+
+          for i in range(row):
+            if cols[i] == col:
+              possible = False
+              break
+            
+            if abs(cols[i]-col ) == row -i:
+             possible = False
+             break 
+
+         if possible:
+             cols[row] = col
+         place(row+1)
+
+           
+    place(0)
+    return count
+    
 
 
 if __name__ == "__main__":
