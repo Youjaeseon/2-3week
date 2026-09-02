@@ -41,7 +41,7 @@ def find_duplicates_brute_force(nums):
                 if nums[i] not in duplicates:
                  duplicates.append(nums[j])
 
-    return sorted(duplicates)
+    return duplicates
 
 
 def find_duplicates_sorting(nums):
