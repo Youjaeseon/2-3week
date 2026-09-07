@@ -33,16 +33,6 @@ BFS: [0, 1, 2, 3]
 from collections import deque
 
 def bfs(graph, start):
-    """
-    너비 우선 탐색
-    
-    Args:
-        graph: 그래프 딕셔너리
-        start: 시작 정점
-    
-    Returns:
-        방문 순서 리스트
-    """
     visited = []
     
     # TODO: 큐 생성 및 시작 정점 추가
