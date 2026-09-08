@@ -35,10 +35,9 @@ def select_meetings(meetings):
     # TODO: 회의가 없으면 0 반환
     if meetings == None:
         return 0, []
-
     
     # TODO: 종료 시간 기준으로 정렬    
-    meetings.sort(key=lambda x:x[1])
+    meetings.sort(key=lambda x:x[1])#람다 말고 다른 방식 찾기.
     
     # TODO: 첫 번째 회의 선택
     selected = [meetings[0]]
